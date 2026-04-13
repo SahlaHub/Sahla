@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sahla | المتجر في صيانة</title>
+    <link rel="shortcut icon" href="SahlaIcon.jpg" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300..900&display=swap" rel="stylesheet" />
+
+    <style>
+        * {
+            font-family: "Rubik", sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* قسم الصيانة الرئيسي - تصميم نظيف وضروري فقط */
+        .maintenance-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+        }
+
+        .maintenance-container {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .maintenance-icon {
+            font-size: 85px;
+            margin-bottom: 20px;
+            animation: gentleFloat 2s ease-in-out infinite;
+        }
+
+        @keyframes gentleFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .maintenance-title {
+            font-size: 52px;
+            font-weight: 800;
+            color: #0f172a;
+            margin-bottom: 15px;
+            letter-spacing: -0.5px;
+        }
+
+        .maintenance-subtitle {
+            font-size: 22px;
+            color: #3889e5;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .maintenance-message {
+            font-size: 18px;
+            color: #334155;
+            line-height: 1.7;
+            margin-bottom: 40px;
+            padding: 0 10px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* بطاقات التواصل - أساسية وجذابة */
+        .contact-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin: 30px 0 20px;
+        }
+
+        .contact-card {
+            background: white;
+            border-radius: 28px;
+            padding: 28px 32px;
+            text-align: center;
+            text-decoration: none;
+            transition: all 0.25s ease;
+            border: 1px solid #e9edf2;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.02);
+            min-width: 240px;
+            cursor: pointer;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-6px);
+            border-color: #3889e5;
+            box-shadow: 0 20px 30px -12px rgba(56, 137, 229, 0.2);
+        }
+
+        .contact-icon {
+            font-size: 52px;
+            margin-bottom: 16px;
+        }
+
+        .whatsapp-text { color: #25D366; }
+        .telegram-text { color: #26A5E4; }
+
+        .contact-card h3 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .contact-value {
+            font-size: 16px;
+            font-weight: 600;
+            color: #1e293b;
+            background: #f1f5f9;
+            padding: 8px 18px;
+            border-radius: 60px;
+            display: inline-block;
+            margin-top: 10px;
+            direction: ltr;
+            font-family: 'Courier New', monospace;
+            letter-spacing: 0.5px;
+        }
+
+        .copy-btn {
+            background: #3889e5;
+            color: white;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 40px;
+            font-size: 13px;
+            font-weight: 500;
+            cursor: pointer;
+            margin-top: 16px;
+            transition: 0.2s;
+            font-family: "Rubik", sans-serif;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .copy-btn i {
+            font-size: 13px;
+        }
+
+        .copy-btn:hover {
+            background: #2c6eb8;
+            transform: scale(1.02);
+        }
+
+        /* إشعار الصيانة */
+        .notice-box {
+            background: #fef7e0;
+            border-radius: 60px;
+            padding: 12px 28px;
+            margin-top: 45px;
+            display: inline-flex;
+            align-items: center;
+            gap: 14px;
+            font-size: 15px;
+            font-weight: 500;
+            color: #b85c00;
+            backdrop-filter: blur(2px);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+
+        .notice-box i {
+            font-size: 18px;
+        }
+
+        /* استجابة سلسة */
+        @media (max-width: 680px) {
+            .maintenance-title {
+                font-size: 36px;
+            }
+            .maintenance-subtitle {
+                font-size: 18px;
+            }
+            .maintenance-message {
+                font-size: 16px;
+                padding: 0 12px;
+            }
+            .contact-card {
+                padding: 22px 24px;
+                min-width: 200px;
+            }
+            .contact-icon {
+                font-size: 44px;
+            }
+            .contact-card h3 {
+                font-size: 20px;
+            }
+            .contact-value {
+                font-size: 14px;
+                padding: 6px 14px;
+            }
+            .notice-box {
+                font-size: 13px;
+                padding: 10px 20px;
+                gap: 8px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .contact-cards {
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+            }
+            .maintenance-section {
+                padding: 30px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- قسم الصيانة الرئيسي - تم إزالة كل العناصر الزائدة عن الحاجة مثل AnnouncementBar, NavBar, FotterBox -->
+    <div class="maintenance-section">
+        <div class="maintenance-container">
+            <div class="maintenance-icon">
+                🛠️🔧
+            </div>
+            <h1 class="maintenance-title">المتجر في صيانة</h1>
+            <p class="maintenance-subtitle">نحن نُحدث المتجر لخدمتك بشكل أفضل</p>
+            <p class="maintenance-message">
+                نقوم حاليًا بتطوير المتجر وإضافة مميزات جديدة وتحسين تجربة التسوق.<br>
+                المتجر سيعود قريبًا جدًا. شكرًا لتفهمك وصبرك الجميل ❤️
+            </p>
+
+            <!-- بطاقات التواصل الأساسية -->
+            <div class="contact-cards">
+                <!-- واتساب -->
+                <div class="contact-card" role="button" tabindex="0" aria-label="التواصل عبر واتساب">
+                    <div class="contact-icon whatsapp-text">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h3 class="whatsapp-text">واتساب</h3>
+                    <div class="contact-value" id="whatsappNumber">+20 01130174485</div>
+                    <button class="copy-btn" onclick="copyToClipboard('+20 01130174485', event)">
+                        <i class="far fa-copy"></i> نسخ الرقم
+                    </button>
+                </div>
+
+                <!-- تيليجرام -->
+                <div class="contact-card" role="button" tabindex="0" aria-label="التواصل عبر تيليجرام">
+                    <div class="contact-icon telegram-text">
+                        <i class="fab fa-telegram"></i>
+                    </div>
+                    <h3 class="telegram-text">تيليجرام</h3>
+                    <div class="contact-value" id="telegramUser">@SahlaOwner</div>
+                    <button class="copy-btn" onclick="copyToClipboard('@SahlaOwner', event)">
+                        <i class="far fa-copy"></i> نسخ المعرف
+                    </button>
+                </div>
+            </div>
+
+            <!-- إشعار إضافي بسيط ومفيد -->
+            <div class="notice-box">
+                <i class="fas fa-clock"></i>
+                <span>وقت الصيانة المتوقع: 4 أيام</span>
+                <i class="fas fa-rocket"></i>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // وظيفة نسخ النص النظيفة + منع انتشار الحدث ومنع فتح الرابط عند الضغط على الزر
+        function copyToClipboard(text, event) {
+            // منع انتقال الحدث إلى العنصر الأب (contact-card) حتى لا يفتح الرابط
+            if(event) {
+                event.stopPropagation();
+            }
+            
+            // نسخ النص بطريقة حديثة
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(text).then(() => {
+                    showTemporaryMessage(text, true);
+                }).catch(() => {
+                    fallbackCopy(text);
+                });
+            } else {
+                fallbackCopy(text);
+            }
+        }
+        
+        function fallbackCopy(text) {
+            const textarea = document.createElement('textarea');
+            textarea.value = text;
+            textarea.style.position = 'fixed';
+            textarea.style.top = '-9999px';
+            textarea.style.right = '-9999px';
+            document.body.appendChild(textarea);
+            textarea.select();
+            try {
+                document.execCommand('copy');
+                showTemporaryMessage(text, true);
+            } catch (err) {
+                showTemporaryMessage(text, false);
+            }
+            document.body.removeChild(textarea);
+        }
+        
+        function showTemporaryMessage(text, success) {
+            // إنشاء رسالة منبثقة صغيرة لطيفة
+            const msgDiv = document.createElement('div');
+            msgDiv.innerText = success ? `✅ تم نسخ: ${text}` : `❌ فشل النسخ، حاول يدويًا`;
+            msgDiv.style.position = 'fixed';
+            msgDiv.style.bottom = '25px';
+            msgDiv.style.left = '50%';
+            msgDiv.style.transform = 'translateX(-50%)';
+            msgDiv.style.backgroundColor = success ? '#1f2937' : '#b91c1c';
+            msgDiv.style.color = 'white';
+            msgDiv.style.padding = '12px 24px';
+            msgDiv.style.borderRadius = '50px';
+            msgDiv.style.fontSize = '14px';
+            msgDiv.style.fontWeight = '500';
+            msgDiv.style.zIndex = '9999';
+            msgDiv.style.fontFamily = "'Rubik', sans-serif";
+            msgDiv.style.boxShadow = '0 8px 20px rgba(0,0,0,0.2)';
+            msgDiv.style.direction = 'rtl';
+            msgDiv.style.backdropFilter = 'blur(4px)';
+            msgDiv.style.letterSpacing = '0.3px';
+            document.body.appendChild(msgDiv);
+            
+            setTimeout(() => {
+                msgDiv.style.opacity = '0';
+                msgDiv.style.transition = 'opacity 0.3s ease';
+                setTimeout(() => {
+                    if(msgDiv && msgDiv.remove) msgDiv.remove();
+                }, 350);
+            }, 1900);
+        }
+        
+        // إضافة وظائف فتح الروابط فقط عند النقر على البطاقة (وليس على زر النسخ)
+        // نربط الأحداث بشكل نظيف لكل بطاقة على حدة
+        document.addEventListener('DOMContentLoaded', () => {
+            const whatsappCard = document.querySelector('.contact-card:first-child');
+            const telegramCard = document.querySelector('.contact-card:last-child');
+            
+            if (whatsappCard) {
+                whatsappCard.addEventListener('click', (e) => {
+                    // نتأكد أن الهدف ليس زر النسخ أو داخله
+                    if (e.target.closest('.copy-btn')) return;
+                    window.open('https://wa.me/201130174485?text=السلام%20عليكم%20بخصوص%20متجر%20سهله', '_blank');
+                });
+            }
+            
+            if (telegramCard) {
+                telegramCard.addEventListener('click', (e) => {
+                    if (e.target.closest('.copy-btn')) return;
+                    window.open('https://t.me/SahlaOwner', '_blank');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
